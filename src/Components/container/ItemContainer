@@ -1,0 +1,25 @@
+class ItemContainer extends Component {
+/* istanbul ignore next */
+componentDidMount() {
+const { fetchInitialData } = this.props;
+
+fetchInitialData();
+}
+render ()
+.....
+return (
+<ItemPage
+......
+/>
+
+const mapStateToProps = (state, _ownProps) => ({ // eslint-disable-line no-unused-vars
+...
+});
+
+/* istanbul ignore next */
+const mapDispatchToProps = dispatch => ({
+setPageStatus: (status) => { dispatch({ type: actionTypes.SET_PAGE_STATUS, status }); },
+fetchInitialData: (items) => { dispatch({ type: actionTypes.FETCH_INITIAL_DATA, items }); },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(injectIntl(ItemContainer));
